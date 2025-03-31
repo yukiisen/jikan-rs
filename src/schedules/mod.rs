@@ -5,10 +5,10 @@ use reqwest::Url;
 use anyhow::Result;
 use anyhow::Context;
 
-use crate::models::schedule::*;
+use crate::models::list::*;
 use crate::API_URL;
 
-pub async fn get_schedule (filter: Weekday, params: Option<&HashMap<&str, &str>>) -> Result<ScheduleResponse> {
+pub async fn get_schedule (filter: Weekday, params: Option<&HashMap<&str, &str>>) -> Result<AnimeListResponse> {
     let mut url = Url::parse(format!("{API_URL}schedules").as_str())?;
     let mut pairs = url.query_pairs_mut();
     pairs.append_pair("filter", filter.as_str());

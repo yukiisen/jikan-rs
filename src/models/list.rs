@@ -2,7 +2,7 @@ use super::anime::Anime;
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
-pub struct ScheduleResponse {
+pub struct AnimeListResponse {
     pub data: Vec<Anime>,
     pub pagination: Pagination,
 }
@@ -21,3 +21,13 @@ pub struct PaginationItems {
     pub per_page: u32,
 }
 
+#[derive(Debug, Deserialize)]
+pub struct SeasonListResponse {
+    pub data: Vec<SeasonEntry>
+}
+
+#[derive(Debug, Deserialize)]
+pub struct SeasonEntry {
+    pub year: u32,
+    pub season: Vec<String>
+}
