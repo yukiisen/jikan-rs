@@ -39,3 +39,29 @@ pub struct RelationEntry {
     pub url: String,
 }
 
+#[derive(Debug, Deserialize)]
+pub struct RecommendedFullResponse {
+    pub data: Vec<RecommendedFullEntry>,
+    pub pagination: Pagination,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct RecommendedFullEntry {
+    pub mal_id: String,
+    pub entry: Vec<RecommendationEntry>,
+    pub content: String,
+    pub user: RecommendationUser,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct RecommendationUser {
+    pub url: String,
+    pub username: String,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct Pagination {
+    pub last_visible_page: u32,
+    pub has_next_page: bool,
+}
+
