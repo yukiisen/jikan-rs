@@ -4,5 +4,6 @@ pub mod anime;
 pub mod schedules;
 pub mod genres;
 pub mod seasons;
+pub mod top;
 
 pub mod models;
