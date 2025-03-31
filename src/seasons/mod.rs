@@ -55,7 +55,7 @@ pub async fn get_current_season (continuing: bool, page: u16, limit: u32, filter
     if continuing { pairs.append_key_only("continuing"); };
     pairs.append_pair("page", page.to_string().as_str());
     pairs.append_pair("limit", limit.to_string().as_str());
-    pairs.append_pair("type", filter.as_str());
+    if !matches!(filter, AnimeType::All) { pairs.append_pair("filter", filter.as_str()); };
 
     drop(pairs);
 
@@ -75,6 +75,26 @@ pub async fn get_season (year: u16, season: Season, continuing: bool, page: u16,
 
     let res = get(url).await?;
 
+    res.json().await.context("Failed to deserialize data")
+}
+
+pub async fn get_seasons () -> Result<SeasonListResponse> {
+    let url = Url::parse(format!("{API_URL}seasons").as_str())?;
+    let res = get(url).await?;
+    res.json().await.context("Failed to deserialize data")
+}
+
+pub async fn get_upcoming_season (page: u16, limit: u32, filter: AnimeType) -> Result<AnimeListResponse> {
+    let mut url = Url::parse(format!("{API_URL}seasons/upcoming").as_str())?;
+    let mut pairs = url.query_pairs_mut();
+    
+    pairs.append_pair("page", page.to_string().as_str());
+    pairs.append_pair("limit", limit.to_string().as_str());
+    if !matches!(filter, AnimeType::All) { pairs.append_pair("filter", filter.as_str()); };
+
+    drop(pairs);
+
+    let res = get(url).await?;
     res.json().await.context("Failed to deserialize data")
 }
 
