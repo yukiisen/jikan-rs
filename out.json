@@ -1,0 +1,140 @@
+{
+    "data": [
+        {
+            "episode": "Episode 12",
+            "images": {
+                "jpg": {
+                    "image_url": null
+                }
+            },
+            "mal_id": 12,
+            "title": "TSUBASA Cat, Part 2",
+            "url": "https:\/\/myanimelist.net\/anime\/5081\/Bakemonogatari\/episode\/12"
+        },
+        {
+            "episode": "Episode 11",
+            "images": {
+                "jpg": {
+                    "image_url": null
+                }
+            },
+            "mal_id": 11,
+            "title": "TSUBASA Cat, Part 1",
+            "url": "https:\/\/myanimelist.net\/anime\/5081\/Bakemonogatari\/episode\/11"
+        },
+        {
+            "episode": "Episode 10",
+            "images": {
+                "jpg": {
+                    "image_url": null
+                }
+            },
+            "mal_id": 10,
+            "title": "Nadeko Snake, Part 2",
+            "url": "https:\/\/myanimelist.net\/anime\/5081\/Bakemonogatari\/episode\/10"
+        },
+        {
+            "episode": "Episode 9",
+            "images": {
+                "jpg": {
+                    "image_url": null
+                }
+            },
+            "mal_id": 9,
+            "title": "Nadeko Snake, Part 1",
+            "url": "https:\/\/myanimelist.net\/anime\/5081\/Bakemonogatari\/episode\/9"
+        },
+        {
+            "episode": "Episode 8",
+            "images": {
+                "jpg": {
+                    "image_url": null
+                }
+            },
+            "mal_id": 8,
+            "title": "Suruga Monkey, Part 3",
+            "url": "https:\/\/myanimelist.net\/anime\/5081\/Bakemonogatari\/episode\/8"
+        },
+        {
+            "episode": "Episode 7",
+            "images": {
+                "jpg": {
+                    "image_url": null
+                }
+            },
+            "mal_id": 7,
+            "title": "Suruga Monkey, Part 2",
+            "url": "https:\/\/myanimelist.net\/anime\/5081\/Bakemonogatari\/episode\/7"
+        },
+        {
+            "episode": "Episode 6",
+            "images": {
+                "jpg": {
+                    "image_url": null
+                }
+            },
+            "mal_id": 6,
+            "title": "Suruga Monkey, Part 1",
+            "url": "https:\/\/myanimelist.net\/anime\/5081\/Bakemonogatari\/episode\/6"
+        },
+        {
+            "episode": "Episode 5",
+            "images": {
+                "jpg": {
+                    "image_url": null
+                }
+            },
+            "mal_id": 5,
+            "title": "Mayoi Mai Mai, Part 3",
+            "url": "https:\/\/myanimelist.net\/anime\/5081\/Bakemonogatari\/episode\/5"
+        },
+        {
+            "episode": "Episode 4",
+            "images": {
+                "jpg": {
+                    "image_url": null
+                }
+            },
+            "mal_id": 4,
+            "title": "Mayoi Mai Mai, Part 2",
+            "url": "https:\/\/myanimelist.net\/anime\/5081\/Bakemonogatari\/episode\/4"
+        },
+        {
+            "episode": "Episode 3",
+            "images": {
+                "jpg": {
+                    "image_url": null
+                }
+            },
+            "mal_id": 3,
+            "title": "Mayoi Mai Mai, Part 1",
+            "url": "https:\/\/myanimelist.net\/anime\/5081\/Bakemonogatari\/episode\/3"
+        },
+        {
+            "episode": "Episode 2",
+            "images": {
+                "jpg": {
+                    "image_url": null
+                }
+            },
+            "mal_id": 2,
+            "title": "Hitagi Crab, Part 2",
+            "url": "https:\/\/myanimelist.net\/anime\/5081\/Bakemonogatari\/episode\/2"
+        },
+        {
+            "episode": "Episode 1",
+            "images": {
+                "jpg": {
+                    "image_url": null
+                }
+            },
+            "mal_id": 1,
+            "title": "Hitagi Crab, Part 1",
+            "url": "https:\/\/myanimelist.net\/anime\/5081\/Bakemonogatari\/episode\/1"
+        }
+    ],
+    "pagination": {
+        "has_next_page": false,
+        "last_visible_page": 1
+    }
+}
