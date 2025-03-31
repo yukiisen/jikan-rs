@@ -14,7 +14,7 @@ pub struct Relation {
 #[derive(Debug, Deserialize)]
 pub struct RelationEntry {
     pub mal_id: u32,
-    pub type_: String,
+    pub r#type: String,
     pub name: String,
     pub url: String,
 }

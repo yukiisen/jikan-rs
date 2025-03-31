@@ -1,6 +1,6 @@
 use std::collections::HashMap;
-use anyhow::Result;
 use anyhow::Context;
+use anyhow::Result;
 
 use reqwest::get;
 use reqwest::Url;
@@ -41,6 +41,22 @@ pub async fn search_anime (query: &str, limit: Option<u32>, params: Option<&Hash
     res.json().await.map_err(anyhow::Error::from)
 }
 
+pub async fn get_anime_moreinfo (id: u32) -> Result<MoreInfoResponse> {
+    let url = Url::parse(format!("{API_URL}anime/{id}/moreinfo").as_str())?;
+
+    let res = get(url).await?;
+
+    res.json().await.context("Failed To deserialize response")
+}
+
+pub async fn get_anime_stats (id: u32) -> Result<AnimeStatisticsResponse> {
+    let url = Url::parse(format!("{API_URL}anime/{id}/statistics").as_str())?;
+
+    let res = get(url).await?;
+
+    res.json().await.context("Failed to deserialize data")
+}
+
 #[cfg(test)]
 mod anime_tests {
     use super::*;
@@ -72,5 +88,23 @@ mod anime_tests {
         } else {
             println!("{results:#?}");
         }
+    }
+
+    #[tokio::test]
+    async fn test_anime_moreinfo () {
+        let info = get_anime_moreinfo(5081).await;
+
+        if let Ok(res) = info {
+            println!("{}", res.data.moreinfo);
+        } else {
+            println!("{info:#?}");
+        }
+    }
+
+    #[tokio::test]
+    async fn test_anime_stats () {
+        let stats = get_anime_stats(5081).await;
+
+        println!("{stats:#?}");
     }
 }

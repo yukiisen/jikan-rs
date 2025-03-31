@@ -17,6 +17,39 @@ pub struct AnimeSearchResponse {
 }
 
 #[derive(Debug, Deserialize)]
+pub struct MoreInfoResponse {
+    pub data: MoreInfo
+}
+
+#[derive(Debug, Deserialize)]
+pub struct AnimeStatisticsResponse {
+    pub data: AnimeStatistics,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct AnimeStatistics {
+    pub watching: u32,
+    pub completed: u32,
+    pub on_hold: u32,
+    pub dropped: u32,
+    pub plan_to_watch: u32,
+    pub total: u32,
+    pub scores: Vec<Score>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct Score {
+    pub score: u8,
+    pub votes: u32,
+    pub percentage: f64,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct MoreInfo {
+    pub moreinfo: String
+}
+
+#[derive(Debug, Deserialize)]
 pub struct Pagination { 
     pub last_visible_page: u32,
     pub has_next_page: bool,
