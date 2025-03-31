@@ -1,8 +1,28 @@
 use serde::Deserialize;
 
+use super::anime::Images;
+
 #[derive(Debug, Deserialize)]
 pub struct RelationsResponse {
     pub data: Vec<Relation>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct RecommendationsResponse {
+    pub data: Vec<Recommendation>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct Recommendation {
+    pub entry: RecommendationEntry,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct RecommendationEntry {
+    pub mal_id: u32,
+    pub url: String,
+    pub images: Images,
+    pub title: String,
 }
 
 #[derive(Debug, Deserialize)]
