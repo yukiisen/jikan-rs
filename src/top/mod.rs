@@ -22,7 +22,7 @@ pub async fn get_top_animes (params: &HashMap<&str, &str>) -> Result<AnimeListRe
     res.json().await.context("Failed to deseialize data")
 }
 
-pub async fn get_top_manga (params: &HashMap<&str, &str>) -> Result<AnimeListResponse> {
+pub async fn get_top_manga (params: &HashMap<&str, &str>) -> Result<MangaListResponse> {
     let mut url = Url::parse(format!("{API_URL}top/manga").as_str())?;
     let mut pairs = url.query_pairs_mut();
 
