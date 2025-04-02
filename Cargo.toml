@@ -7,7 +7,7 @@ license = "MIT"
 description = "A basic wrapper for jikan.moe API"
 repository = "https://github.com/yukiisen/jikan-rs"
 keywords = ["anime", "manga", "jikan", "api"]
-categories = ["api-bindings", "web-programming::http"]
+categories = ["api-bindings", "web-programming"]
 readme = "README.md"
 
 [dependencies]
