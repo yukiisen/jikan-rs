@@ -2,6 +2,13 @@
 name = "jikan-rs"
 version = "1.0.0"
 edition = "2024"
+authors = ["yukiisen <yukii.senp@gmail.com>"]
+license = "MIT"
+description = "A basic wrapper for jikan.moe API"
+repository = "https://github.com/yukiisen/jikan-rs"
+keywords = ["anime", "manga", "jikan", "api"]
+categories = ["API wrapper"]
+readme = "README.md"
 
 [dependencies]
 anyhow = "1.0.97"
